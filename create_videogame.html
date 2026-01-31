@@ -1,0 +1,86 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_videogame.js" type="module"></script>
+
+    <title>Examen IISSI-2</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div class="container">
+        <div id="errors"></div>
+        <h1 class="text-center" id="title">Create videogame</h1>
+        <hr>
+
+        <form id="videogameForm">
+            <div class="form-group pb-3">
+                <label for="input-url">
+                    <h5>Image URL:</h5>
+                </label>
+                <input required type="text" class="form-control" id="input-url" name="imageUrl">
+            </div>
+
+            <div class="form-group pb-3">
+                <label for="input-url">
+                    <h5>Title:</h5>
+                </label>
+                <input required type="text" class="form-control" id="input-title" name="title">
+            </div>
+
+            <div class="form-group pb-3">
+                <label for="input-url">
+                    <h5>Description:</h5>
+                </label>
+                <input required type="text" class="form-control" id="input-description" name="description">
+            </div>
+            <div class="form-group pb-3">
+                <label for="input-url">
+                    <h5>Platform:</h5>
+                </label>
+                <input required type="text" class="form-control" id="input-platform" name="platform">
+            </div>
+
+            <div class="form-group pb-3">
+                <label for="input-alcohol">
+                    <h5>Release Year:</h5>
+                </label>
+                <input required type="number" class="form-control" step="0.01" id="input-releaseYear" name="releaseYear">
+            </div>
+            <div class="form-group form-check pb-3">
+    <input type="checkbox" class="form-check-input" id="input-checkbox" name="active" value="1">
+    <label class="form-check-label" for="input-checkbox"><h5>Active</h5></label>
+</div>
+            <div class="button-div">
+            <button type="submit" class="btn btn-primary m-2 px-5 py-3" id="submit-button">Create</button>
+            <button type="button" class="btn btn-danger m-2 px-5 py-3" id="delete-button" style="display: none;">Delete</button>
+
+            </div>
+            
+        </form>
+
+
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+
+</body>
+
+</html>
